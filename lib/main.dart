@@ -43,7 +43,10 @@ class HomeWidgetState extends State<HomeWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Homepage')),
-
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Patterns'),
+          BottomNavigationBarItem(icon: Icon(Icons.shape_line), label: 'Shape')],
+      ),
     );
   }
 }
