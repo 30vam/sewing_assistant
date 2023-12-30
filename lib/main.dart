@@ -14,18 +14,17 @@ class MyApp extends StatelessWidget
   Widget build(BuildContext context) {
     return MaterialApp (
       title: "Sewing Assistant",  //Application name that is shown in task view
-      theme: appThemeData,
+      theme: ThemeData(
+          primaryColor: Colors.blue[200],
+          scaffoldBackgroundColor: Colors.grey[300],
+          appBarTheme: AppBarTheme(elevation: 3, backgroundColor: Colors.blue[200], centerTitle: true, shadowColor: Colors.black),
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(elevation: 5, backgroundColor: Colors.blue[100])
+      ),
       home: const HomeWidget()
     );
 
   }
 }
-
-//Application theme
-ThemeData appThemeData = ThemeData(
-    primaryColor: Colors.amber,
-    scaffoldBackgroundColor: Colors.grey[200]
-);
 
 //Homepage widget
 class HomeWidget extends StatefulWidget
